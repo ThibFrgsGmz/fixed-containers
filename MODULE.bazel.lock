@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 6,
-  "moduleFileHash": "28e732c3e7081f411f9719122180b2ede25d69bd27868455e1b703f046192032",
+  "moduleFileHash": "debfea7d4cbc3a09427e664052909363a6fcc0696dbfedfbd939b8a34c621ee7",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -34,7 +34,8 @@
             "column": 0
           },
           "imports": {
-            "com_github_ericniebler_range-v3": "com_github_ericniebler_range-v3"
+            "com_github_ericniebler_range-v3": "com_github_ericniebler_range-v3",
+            "com_github_neargye_magic_enum": "com_github_neargye_magic_enum"
           },
           "devImports": [],
           "tags": [
@@ -54,23 +55,25 @@
                 "line": 11,
                 "column": 13
               }
+            },
+            {
+              "tagName": "@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+              "attributeValues": {
+                "urls": [
+                  "https://github.com/Neargye/magic_enum/archive/d63a9d63717640705c6c9654d68fa6575d39bab8.tar.gz"
+                ],
+                "strip_prefix": "magic_enum-d63a9d63717640705c6c9654d68fa6575d39bab8",
+                "sha256": "9b2b1788dd651feab88bcffb0b2ae3ded4c27142a295d6ede882c8fc8a327a35",
+                "name": "com_github_neargye_magic_enum"
+              },
+              "devDependency": false,
+              "location": {
+                "file": "@@//:MODULE.bazel",
+                "line": 18,
+                "column": 13
+              }
             }
           ],
-          "hasDevUseExtension": false,
-          "hasNonDevUseExtension": true
-        },
-        {
-          "extensionBzlFile": "@fixed-containers//:fixed_containers_deps.bzl",
-          "extensionName": "fixed_containers_deps",
-          "usingModule": "<root>",
-          "location": {
-            "file": "@@//:MODULE.bazel",
-            "line": 18,
-            "column": 38
-          },
-          "imports": {},
-          "devImports": [],
-          "tags": [],
           "hasDevUseExtension": false,
           "hasNonDevUseExtension": true
         }
@@ -1406,7 +1409,7 @@
     },
     "@@rules_foreign_cc~//foreign_cc:extensions.bzl%ext": {
       "general": {
-        "bzlTransitiveDigest": "QbxK92//k6c63fpMer2Lkk6224s9gwYoVFFS6mdkucI=",
+        "bzlTransitiveDigest": "0/GTFp9D0gb6hOu9jXXnaWa5hPbzPpIzLVxITdJTwvo=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -1677,7 +1680,7 @@
     },
     "@@rules_java~//java:extensions.bzl%toolchains": {
       "general": {
-        "bzlTransitiveDigest": "tJHbmWnq7m+9eUBnUdv7jZziQ26FmcGL9C5/hU3Q9UQ=",
+        "bzlTransitiveDigest": "0N5b5J9fUzo0sgvH4F3kIEaeXunz4Wy2/UtSFV/eXUY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -2182,7 +2185,7 @@
     },
     "@@rules_python~//python/extensions:python.bzl%python": {
       "general": {
-        "bzlTransitiveDigest": "o0WIKfdQRSZd/9+sY+LDTrUuYozMBFuYsL85uwJYKk8=",
+        "bzlTransitiveDigest": "hcJ2K4XvZ3hi0G4g5MkUEs8xowZlCfrgq3JX4dyipWY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},

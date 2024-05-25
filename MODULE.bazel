@@ -15,5 +15,9 @@ http_archive(
     sha256 = "2a3e956cc0174ea883d36c51aded8549af10078558177e8f6d76c5e33de950c1",
 )
 
-fixed_containers_deps = use_extension("//:fixed_containers_deps.bzl", "fixed_containers_deps")
-use_repo(fixed_containers_deps)
+http_archive(
+    name = "com_github_neargye_magic_enum",
+    urls = ["https://github.com/Neargye/magic_enum/archive/d63a9d63717640705c6c9654d68fa6575d39bab8.tar.gz"],
+    strip_prefix = "magic_enum-d63a9d63717640705c6c9654d68fa6575d39bab8",
+    sha256 = "9b2b1788dd651feab88bcffb0b2ae3ded4c27142a295d6ede882c8fc8a327a35",
+)
