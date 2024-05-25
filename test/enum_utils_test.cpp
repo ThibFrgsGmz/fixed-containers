@@ -231,7 +231,8 @@ TEST(RichEnum, ValueOfName)
     }
 
     {
-        constexpr const TestRichEnum1& MY_VALUE = TestRichEnum1::value_of("C_ONE").value();
+        constexpr auto value_opt = TestRichEnum1::value_of("C_ONE");
+        constexpr const TestRichEnum1& MY_VALUE = value_opt.value();
 
         static_assert(MY_VALUE == TestRichEnum1::C_ONE());
         static_assert(&MY_VALUE == &TestRichEnum1::C_ONE());
@@ -249,13 +250,15 @@ TEST(RichEnum, ValueOfBackingEnum)
         static_assert(TestRichEnum1::value_of(static_cast<BE>(29)) == std::nullopt);
     }
 
-    {
-        using BE = detail::TestRichEnum1BackingEnum;
-        constexpr const TestRichEnum1& MY_VALUE = TestRichEnum1::value_of(BE::C_ONE).value();
+{
+    using BE = detail::TestRichEnum1BackingEnum;
+    constexpr auto value_opt = TestRichEnum1::value_of(BE::C_ONE);
+    constexpr const TestRichEnum1& MY_VALUE = value_opt.value();
 
-        static_assert(MY_VALUE == TestRichEnum1::C_ONE());
-        static_assert(&MY_VALUE == &TestRichEnum1::C_ONE());
-    }
+    static_assert(MY_VALUE == TestRichEnum1::C_ONE(), "MY_VALUE should be equal to C_ONE");
+    static_assert(&MY_VALUE == &TestRichEnum1::C_ONE(), "Address of MY_VALUE should be equal to address of C_ONE");
+}
+
 }
 
 TEST(RichEnum, ValueOfUnderlyingInt)
@@ -269,10 +272,11 @@ TEST(RichEnum, ValueOfUnderlyingInt)
     }
 
     {
-        constexpr const TestRichEnum1& MY_VALUE = TestRichEnum1::value_of(19).value();
+        constexpr auto value_opt = TestRichEnum1::value_of(19);
+        constexpr const TestRichEnum1& MY_VALUE = value_opt.value();
 
-        static_assert(MY_VALUE == TestRichEnum1::C_ONE());
-        static_assert(&MY_VALUE == &TestRichEnum1::C_ONE());
+        static_assert(MY_VALUE == TestRichEnum1::C_ONE(), "MY_VALUE should be equal to C_ONE");
+        static_assert(&MY_VALUE == &TestRichEnum1::C_ONE(), "Address of MY_VALUE should be equal to address of C_ONE");
     }
 }
 
