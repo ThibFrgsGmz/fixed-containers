@@ -1048,7 +1048,8 @@ static constexpr FixedUnorderedMap<int, int, 7> LIVENESS_TEST_INSTANCE{{1, 100}}
 TEST(FixedUnorderedMap, IteratorDereferenceLiveness)
 {
     {
-        constexpr auto ref = []() { return *LIVENESS_TEST_INSTANCE.begin(); }();
+        constexpr auto iter = LIVENESS_TEST_INSTANCE.cbegin();
+        constexpr auto ref = *iter;
         static_assert(ref.first == 1);
         static_assert(ref.second == 100);
     }

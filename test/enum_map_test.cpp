@@ -1230,7 +1230,9 @@ static constexpr EnumMap<TestEnum1, int> LIVENESS_TEST_INSTANCE{{TestEnum1::ONE,
 TEST(EnumMap, IteratorDereferenceLiveness)
 {
     {
-        constexpr auto ref = []() { return *LIVENESS_TEST_INSTANCE.begin(); }();
+        constexpr auto iter = LIVENESS_TEST_INSTANCE.cbegin();
+        constexpr auto ref = *iter;
+
         static_assert(ref.first == TestEnum1::ONE);
         static_assert(ref.second == 100);
     }
