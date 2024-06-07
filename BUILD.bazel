@@ -1292,6 +1292,7 @@ cc_test(
     srcs = ["test/in_out_test.cpp"],
     deps = [
         ":in_out",
+        ":mock_testing_types",
         "@googletest//:gtest",
         "@googletest//:gtest_main",
     ],
