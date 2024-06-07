@@ -1049,8 +1049,8 @@ cc_test(
         ":fixed_doubly_linked_list_raw_view",
         ":mock_testing_types",
         ":test_utilities_common",
-        "@com_google_googletest//:gtest",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
     copts = ["-std=c++20"],
 )
@@ -1128,8 +1128,8 @@ cc_test(
         ":fixed_unordered_map_raw_view",
         ":mock_testing_types",
         ":test_utilities_common",
-        "@com_google_googletest//:gtest",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
     copts = ["-std=c++20"],
 )
@@ -1161,8 +1161,8 @@ cc_test(
         ":fixed_unordered_set_raw_view",
         ":mock_testing_types",
         ":test_utilities_common",
-        "@com_google_googletest//:gtest",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
     copts = ["-std=c++20"],
 )
@@ -1362,8 +1362,8 @@ cc_test(
     srcs = ["test/memory_test.cpp"],
     deps = [
         ":memory",
-        "@com_google_googletest//:gtest",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
     copts = ["-std=c++20"],
 )
@@ -1423,8 +1423,8 @@ cc_test(
     deps = [
         ":optional_ref",
         ":mock_testing_types",
-        "@com_google_googletest//:gtest",
-        "@com_google_googletest//:gtest_main",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
     ],
     copts = ["-std=c++20"],
 )
