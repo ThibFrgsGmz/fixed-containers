@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 6,
-  "moduleFileHash": "debfea7d4cbc3a09427e664052909363a6fcc0696dbfedfbd939b8a34c621ee7",
+  "moduleFileHash": "39e02331c33b021c7520147796e9d2be9a38bb2698c1e44c1ab9ea31ac18d782",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -20,7 +20,7 @@
       "name": "fixed-containers",
       "version": "",
       "key": "<root>",
-      "repoName": "fixed-containers",
+      "repoName": "com_tesla_fixed-containers",
       "executionPlatformsToRegister": [],
       "toolchainsToRegister": [],
       "extensionUsages": [
@@ -52,7 +52,7 @@
               "devDependency": false,
               "location": {
                 "file": "@@//:MODULE.bazel",
-                "line": 11,
+                "line": 14,
                 "column": 13
               }
             },
@@ -69,7 +69,7 @@
               "devDependency": false,
               "location": {
                 "file": "@@//:MODULE.bazel",
-                "line": 18,
+                "line": 21,
                 "column": 13
               }
             }
