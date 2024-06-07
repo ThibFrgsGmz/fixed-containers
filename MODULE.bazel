@@ -1,4 +1,7 @@
-module(name = "fixed-containers")
+module(
+    name = "fixed-containers",
+    repo_name = "com_tesla_fixed-containers",
+)
 
 bazel_dep(name = "googletest", version = "1.14.0.bcr.1")
 
